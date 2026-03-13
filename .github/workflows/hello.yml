@@ -2,8 +2,7 @@
 name: hello-workflow
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: 
 # jobs inside the workflow 
 jobs:
   # This is the name of the job
