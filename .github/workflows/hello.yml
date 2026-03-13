@@ -1,0 +1,18 @@
+# the workflow name 
+name: hello-workflow
+
+on:
+  push:
+    branches: [main]
+# jobs inside the workflow 
+jobs:
+  # This is the name of the job
+  hello:
+    # the runner where the job runs
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: echo "hello everyone"
+
+      - name: print username
+        run: echo " hello $USER"
