@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checks out the code
-        run: git "cloning the code"
+        run: echo "cloning the code"
 
   build:
     runs-on: ubuntu-latest
