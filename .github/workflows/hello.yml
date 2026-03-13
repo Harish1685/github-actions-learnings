@@ -16,3 +16,12 @@ jobs:
 
       - name: print username
         run: echo " hello $USER"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show the java version
+        run: java --version
+
+      - name: show the docker version
+        run: docker --version
