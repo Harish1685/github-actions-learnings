@@ -1,0 +1,30 @@
+name: cicd-skeleton
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checks out the code
+        run: git "cloning the code"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the code
+        run: echo "building the code"
+
+  test:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: test the code
+        run: echo "testing the code"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the code
+        run: echo "deploying the code"
