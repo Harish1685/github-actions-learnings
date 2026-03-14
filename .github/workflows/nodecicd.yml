@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASS }}
 
       - name: docker build 
-        run: docker build -t {{ vars.DOCKERHUB_USER }}/node-app:latest
+        run: docker build -t ${{ vars.DOCKERHUB_USER }}/node-app:latest .
 
       - name: docker push
         run: docker push {{ vars.DOCKERHUB_USER }}/node-app:latest
