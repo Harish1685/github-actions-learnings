@@ -3,6 +3,8 @@ name: cicd-skeleton
 on:
   push:
     branches: [main]
+    paths:
+      - "**.html"
 
 jobs:
   checkout:
