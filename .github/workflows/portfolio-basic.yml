@@ -1,8 +1,6 @@
 name: portfolio-basic
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
     
 

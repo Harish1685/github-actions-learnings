@@ -1,7 +1,6 @@
 name: cicd-skeleton
 
 on:
-  push:
   workflow_dispatch:
     # enable for specific paths to run the pipeline
     #paths:
