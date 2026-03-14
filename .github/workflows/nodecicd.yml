@@ -1,0 +1,24 @@
+name: basic-node-app
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      
+      - name: docker login 
+        uses: actions/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: docker build 
+        run: docker build -t {{ vars.DOCKERHUB_USER }}/node-app:latest
+
+      - name: docker push
+        run: docker push {{ vars.DOCKERHUB_USER }}/node-app:latest
