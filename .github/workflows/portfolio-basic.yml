@@ -1,0 +1,23 @@
+name: portfolio-basic
+
+on:
+  push:
+    branches: [main]
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+        # checks out the code from the repository
+      - name: checking out the code
+        uses: actions/checkout@v4
+        # sets up the github pages     
+      - name: setting up github pages
+        uses: actions/configure-pages@v4
+        # uploads all the static files for hosting  
+      - name: upload the static files 
+        uses: actions/upload-artifact@v4
+        # deploys the static content to github pages
+      - name: deploy to github pages
+        uses: actions/deploy-pages@v4
